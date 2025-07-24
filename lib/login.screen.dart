@@ -37,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() => _isLoading = false);
 
     if (error != null) {
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(error), backgroundColor: Colors.red),
       );
@@ -55,20 +56,15 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Welcome Back'),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
-      ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(20.0),
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 50),
-              Icon(Icons.chat_bubble, size: 100, color: Colors.blue),
+              Icon(Icons.chat_rounded, size: 100, color: Colors.blue),
               SizedBox(height: 30),
               Text(
                 'Sign In',
@@ -134,20 +130,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 16),
+                        padding: EdgeInsets.symmetric(vertical: 8),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                       child: Text(
                         'Sign In',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
-              SizedBox(height: 20),
 
               // Registration Link
               Row(
@@ -157,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(
                     onPressed: _goToRegistration,
                     child: Text(
-                      'Create one',
+                      'Sign up',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,

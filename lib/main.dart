@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:messenger/chat.screen.dart';
 import 'package:messenger/login.screen.dart';
+import 'package:messenger/use.list.screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,8 +17,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Chat App',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      title: 'Private Messenger',
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.cyan,
+        brightness: Brightness.light,
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.cyan,
+        brightness: Brightness.dark,
+      ),
       home: AuthWrapper(),
     );
   }
@@ -33,7 +43,7 @@ class AuthWrapper extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return ChatScreen();
+          return UsersListScreen();
         } else {
           return LoginScreen();
         }
