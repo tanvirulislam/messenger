@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Colors.cyan,
         brightness: Brightness.dark,
       ),
-      home: AuthWrapper(),
+      // home: AuthWrapper(),
+      home: Scaffold(),
     );
   }
 }
