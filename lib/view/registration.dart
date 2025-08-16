@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:messenger/auth.services.dart';
+import 'package:messenger/helper.method/auth.services.dart';
 
 class RegistrationScreen extends StatefulWidget {
   final VoidCallback onLoginTap;

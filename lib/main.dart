@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:messenger/login.screen.dart';
-import 'package:messenger/use.list.screen.dart';
+import 'package:messenger/view/login.screen.dart';
+import 'package:messenger/view/use.list.screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

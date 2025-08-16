@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:messenger/auth.services.dart';
-import 'package:messenger/conversation.service.dart';
+import 'package:messenger/helper.method/auth.services.dart';
+import 'package:messenger/helper.method/conversation.service.dart';
 import 'package:messenger/model/user.profile.model.dart';
-import 'package:messenger/private.chat.scrren.dart';
+import 'package:messenger/view/private.chat.scrren.dart';
 
 class UsersListScreen extends StatefulWidget {
   const UsersListScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:messenger/auth.services.dart';
-import 'package:messenger/conversation.service.dart';
+import 'package:messenger/helper.method/auth.services.dart';
+import 'package:messenger/helper.method/conversation.service.dart';
 import 'package:messenger/model/private.message.dart';
 import 'package:messenger/model/user.profile.model.dart';
 

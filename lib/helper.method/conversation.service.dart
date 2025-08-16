@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:messenger/use.sevices.dart';
+import 'package:messenger/helper.method/use.sevices.dart';
 
 class ConversationService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
